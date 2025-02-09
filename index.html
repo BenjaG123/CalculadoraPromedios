@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedios | Benjamín Garcés</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/Logo_Nuevo_Ufro.png" type="x-icon">
+</head>
+<body>
+    <!-- Header -->
+     <header>
+        <nav class="navbar">
+            <div class="icon">
+                <a href="#"><img src="images/Logo_Nuevo_Ufro.png" alt="logo"></a>
+            </div>
+        </nav>
+     </header>
+
+    <!-- Hero Section -->
+    <section>
+        <div class="hero">
+            <div class="container">
+                <h1 class="titulo">Calculadora de Promedios</h1>
+                <p class="parrafo">Primero indica la cantidad de notas practicas y teoricas del ramo. Luego indica el porcentaje de cada parte.</p>
+            </div>
+    </section>
+
+    <section class="calculadora">
+        <div class="container">
+            
+            <div class="formulario">
+                <form id="notasForm">
+                    <!-- Campos para ingresar la cantidad de notas -->
+                    <label for="cantidadPracticas">Cantidad de notas prácticas:</label>
+                    <input type="number" id="cantidadPracticas" min="0" required>
+        
+                    <label for="cantidadTeoricas">Cantidad de notas teóricas:</label>
+                    <input type="number" id="cantidadTeoricas" min="0" required>
+
+                    <!-- Campos para ingresar los porcentajes de práctica y teoría -->
+                    <label for="porcentajePractica">Porcentaje de la parte práctica:</label>
+                    <input type="number" id="porcentajePractica" min="0" max="100" required>
+
+                    <label for="porcentajeTeorica">Porcentaje de la parte teórica:</label>
+                    <input type="number" id="porcentajeTeorica" min="0" max="100" required>
+
+                    <select name="select">
+                        <option value="value1">Se aprueban juntas</option>
+                        <option value="value2" selected>Se aprueban por separado</option>
+                      </select>
+        
+                    <!-- Botón para generar los campos de notas -->
+                    <button type="button" onclick="generarCamposNotas()">Generar Campos de Notas</button>
+        
+                    <!-- Contenedor para los campos de notas -->
+                    <div id="notasContainer">
+                        <!-- Aquí se agregarán dinámicamente los campos de notas -->
+                    </div>
+        
+                    <!-- Botón para calcular el promedio -->
+                    <button type="button" onclick="calcularPromedio()">Calcular Promedio</button>
+                </form>
+                <div id="resultado"></div>
+    </section>
+        
+
+    <script src="script.js"></script>
+</body>
+</html>
