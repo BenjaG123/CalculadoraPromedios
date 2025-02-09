@@ -133,8 +133,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;;
-    height: 130vh;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 0;
     flex-direction: column;
     background-color: var(--white-color);
 }
@@ -205,4 +206,67 @@ button:hover {
     padding: 50px 100px;
 }
 
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .icon{
+        text-align: center;
+    }
+
+    .icon a{
+        font-size: var(--font-size-l);
+        font-weight: var(--font-weight-bold);
+        display: flex;
+        align-items: center;
+    }
+
+    .icon img{
+        width: 80px;
+    }
+
+    .hero .container {
+        padding: 20px; 
+    }
+
+    .titulo {
+        font-size: var(--font-size-xl);  
+    }
+
+    .parrafo {
+        font-size: var(--font-size-s); 
+    }
+
+    
+    .calculadora .container {
+        width: 90%; 
+        padding: 15px; 
+    }
+
+    
+    input, select, button {
+        width: 100%; 
+        margin-bottom: 15px; 
+    }
+
+   
+    #notasContainer {
+        width: 100%; 
+    }
+
+    
+    button[type="button"] {
+        width: 100%; 
+    }
+
+    
+    #resultado {
+        font-size: var(--font-size-m); 
+    }
+}
 
